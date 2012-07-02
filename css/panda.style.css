@@ -1,40 +1,8 @@
 /* Page styles */
-
+	
+	/* 1em to equal 10px, anything sized in em's will shrink/grow depending on font-size % used */
 	body {
-		color: #202020;
-		background-color: #ededed;
-		font-family: Arial,sans-serif;
-		font-size: 0.84em;
-		font-style: normal;
-		font-variant: normal;
-		font-weight: normal;
-		line-height: 1.333;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		color: #8B3B37;
-		font-family: georgia,times,"Times New Roman",times-roman,serif;
-		font-size: 20px;
-		font-weight: bold;
-		letter-spacing: -1px;
-		line-height: 26px;
-		margin: 0;
-		padding: 0 0 6px;
-		text-decoration: underline;
-	}
-
-	p {
-		margin: 0.33em 0 1em;
-		line-height: 1.4;
-	}
-
-	#main {
-		margin: 1.2em;
-		background-color: #ffffff;
-		border: 1px solid #DFDFDF;
-	}
-	.section {
-		padding: 1.2em;
+		font-size: 62.5%;
 	}
 
 	.canvas { background-color: #ededed; }
@@ -85,7 +53,7 @@
 			width: 60em;
 			height: 30em;
 			background: #dddddd;
-			font-size: 2em;
+			font-size: 1em;
 			z-index: 100;
 		}
 
