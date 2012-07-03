@@ -1,3 +1,19 @@
+/* Imports */
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+
+/* Colours */
+$canvas: #ededed;
+$panda-backdrop: darken($canvas, 5%);
+$panda-body: #ffffff;
+$panda-left-ear: #800080;
+$panda-face: #ff9955;
+$panda-right-ear: #ffdd55;
+$panda-left-arm: #ccff00;
+$panda-right-arm: #a02c2c;
+$panda-left-foot: #8bcfdf;
+$panda-right-foot: #88aa00;
+
 /* Page styles */
 	
 	/* 1em to equal 10px, anything sized in em's will shrink/grow depending on font-size % used */
@@ -5,46 +21,9 @@
 		font-size: 62.5%;
 	}
 
-	.canvas { background-color: #ededed; }
+	.canvas { background-color: $canvas; }
 
 /* Panda CSS pieces */
-
-	/* 
-		transform: scale(0.80) rotate(11deg) skew(32deg, 0deg); 
-		-moz-transform: translate(100px) rotate(40deg);
-		-moz-transform-origin: 60% 100%;
-
-		-webkit-transform: translate(100px) rotate(40deg);
-		-webkit-transform-origin: 60% 100%;
-
-		-o-transform:translate(100px) rotate(40deg); 
-		-o-transform-origin:60% 100%;
-
-		
-		-webkit-border-top-left-radius: 2px;
-		-webkit-border-top-right-radius: 4px;
-		-webkit-border-bottom-right-radius: 8px;
-		-webkit-border-bottom-left-radius: 6px;
-		-moz-border-radius-topleft: 2px;
-		-moz-border-radius-topright: 4px;
-		-moz-border-radius-bottomright: 8px;
-		-moz-border-radius-bottomleft: 6px;
-		border-top-left-radius: 2px;
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 8px;
-		border-bottom-left-radius: 6px;
-		
-		-moz-box-shadow: 0 100px 15px hsla(0,0%,0%,.6);
-		-webkit-box-shadow: 0 100px 15px hsla(0,0%,0%,.6);
-		box-shadow: 0 100px 15px hsla(0,0%,0%,.6);
-		
-		background: #b80000;
-		background: -moz-linear-gradient(-90deg, #9a0000, #b80000);
-		background: -webkit-gradient(linear, 0 top, 0 bottom, from(#9a0000), to(#b80000));
-		
-		tl-x, tr-x, br-x, bl-x / tl-y, tr-y, br-y, bl-y
-		-moz-border-radius: 4em 1.2em 2em 3em / 5em 0.7em 5em 3em;
-	*/
 	
 	/* Container */
 	
@@ -52,7 +31,7 @@
 			position: relative;
 			width: 60em;
 			height: 30em;
-			background: #dddddd;
+			background: $panda-backdrop;
 			font-size: 1em;
 			z-index: 100;
 		}
@@ -81,164 +60,202 @@
 		
 		.panda .head .body { top: 0.9em; left: 2.5em; z-index: 420; }
 		.panda .head .body .colour { 
-			width: 14.1em; height: 11.5em; background-color: #ffffff; 
-			-moz-border-radius: 6.2em 7.5em 2.5em 4.9em / 5.5em 7.6em 3.4em 3em;
+			width: 14.1em; height: 11.5em; background-color: $panda-body;
+			@include border-top-left-radius(6.2em 5.5em);
+			@include border-top-right-radius(7.5em 7.6em);
+			@include border-bottom-right-radius(2.5em 3.4em);
+			@include border-bottom-left-radius(4.9em 3em);
 		}
 		
 		.panda .head .face { top: 4.6em; left: 5.3em; z-index: 430; }
-		.panda .head .face .colour { top: 4.6em; left: 9.5em; background-color: #ff9955; }
+		.panda .head .face .colour { top: 4.6em; left: 9.5em; background-color: $panda-face; }
 		
 		.panda .head .face .left-eye { top: 0.7em; left: 0em; }
 		.panda .head .face .left-eye .colour { 
-			width: 4.3em; height: 4.1em; 
-			-moz-border-radius: 1.8em 2.1em 3.1em 1.4em / 1.8em 2em 1.8em 1.8em;
+			width: 4.3em; height: 4.1em;
+			@include border-top-left-radius(1.8em 1.8em);
+			@include border-top-right-radius(2.1em 2em);
+			@include border-bottom-right-radius(3.1em 1.8em);
+			@include border-bottom-left-radius(1.4em 1.8em);
 		}
 		
 		.panda .head .face .right-eye { top: 0em; left: 7.3em; }
 		.panda .head .face .right-eye .colour { 
 			width: 2.7em; height: 3.4em;
-			-moz-border-radius: 1.2em 1.1em 1em 1.7em / 1.3em 1.2em 1.1em 1.5em;
+			@include border-top-left-radius(1.2em 1.3em);
+			@include border-top-right-radius(1.1em 1.2em);
+			@include border-bottom-right-radius(1em 1.1em);
+			@include border-bottom-left-radius(1.7em 1.5em);
 		}	
 		
 		.panda .head .face .nose { top: 3.85em; left: 5.2em; }
 		.panda .head .face .nose .colour { 
 			width: 4em; height: 2.8em;
-			-moz-border-radius: 0 0 2.9em 1.4em / 0 0 3em 2.2em;	
+			@include border-bottom-right-radius(2.9em 3em);
+			@include border-bottom-left-radius(1.4em 2.2em);
 		}
-		.panda .head .face .mask .colour { background-color: #ffffff; }
+		.panda .head .face .mask .colour { background-color: $panda-body; }
 		.panda .head .face .nosemask { top: 3.55em; left: 5em; }
 		.panda .head .face .nosemask .colour { 
 			width: 4.4em; height: 2.6em;
-			-moz-border-radius: 0 0 2.9em 1.4em / 0 0 3em 2.2em;
+			@include border-bottom-right-radius(2.9em 3em);
+			@include border-bottom-left-radius(1.4em 2.2em);
 		}
 	
 		.panda .head .left-ear { top: 2.1em; left: 0em; z-index: 440; }
 		.panda .head .left-ear .ear .colour { 
-			width: 4.8em; height: 8.3em; background-color: #800080;
-			-moz-border-radius: 3.4em 1em 2.3em 2.5em / 4.6em 1em 7.3em 3.2em;
+			width: 4.8em; height: 8.3em; background-color: $panda-left-ear;
+			@include border-top-left-radius(3.4em 4.6em);
+			@include border-top-right-radius(1em);
+			@include border-bottom-right-radius(2.3em 7.3em);
+			@include border-bottom-left-radius(2.5em 3.2em);
 		}
 		.panda .head .left-ear .mask { top: 0.3em; left: 3.6em; }
 		.panda .head .left-ear .mask .colour { 
-			width: 1.5em; height: 8em; background-color: #ffffff; 
-			-moz-border-radius: 1em 0 0 1em / 4em 0 0 4em;
-			-moz-transform: rotate(13deg);
+			width: 1.5em; height: 8em; background-color: $panda-body;
+			@include border-top-left-radius(1em 4em);
+			@include border-bottom-left-radius(1em 4em);
+			@include transform(rotate(13deg));
 		}
 	
 		.panda .head .right-ear { top: 0em; left: 10.8em; z-index: 410; }
 		.panda .head .right-ear .colour { 
-			width: 4em; height: 7.5em; background-color: #ffdd55;
-			-moz-border-radius: 1em 2.9em 3.7em 1em / 3em 3em 5em 2em; 
-			-moz-transform: rotate(-50deg);
-			-moz-transform-origin: 1.7em 2.1em;
+			width: 4em; height: 7.5em; background-color: $panda-right-ear;
+			@include border-top-left-radius(1em 3em);
+			@include border-top-right-radius(2.9em 3em);
+			@include border-bottom-right-radius(3.7em 5em);
+			@include border-bottom-left-radius(1em 2em);
+			@include apply-origin(1.7em 2.1em, false);
+			@include transform(rotate(-50deg));
 		}
 		
 		.panda .torso { top: 10.5em; left: 0.9em; z-index: 300; }
 		
 		.panda .torso .body { top: 0.9em; left: 7em; z-index: 330; }
 		.panda .torso .body .colour { 
-			width: 14.1em; height: 14.5em; background-color: #ffffff; 
-			-moz-border-radius: 3em 3em 6.5em 7.2em / 3em 3em 9.5em 10.5em;
+			width: 14.1em; height: 14.5em; background-color: $panda-body;
+			@include border-top-left-radius(3em);
+			@include border-top-right-radius(3em);
+			@include border-bottom-right-radius(6.5em 9.5em);
+			@include border-bottom-left-radius(7.2em 10.5em);
 		}
 	
 		.panda .torso .left-arm { top: 1em; left: 3.6em; z-index: 340; }
-		.panda .torso .left-arm .colour { background-color: #ccff00; }
+		.panda .torso .left-arm .colour { background-color: $panda-left-arm; }
 		.panda .torso .left-arm .top { top: 0em; left: 0em; }
 		.panda .torso .left-arm .top .colour { 
-			width: 6.5em; height: 6em; 
-			-moz-border-radius: 6.5em 0 5em 0 / 6em 0 5em 0;
+			width: 6.5em; height: 6em;
+			@include border-top-left-radius(6.5em 6em);
+			@include border-bottom-right-radius(5em);
 		}
 		.panda .torso .left-arm .bottom { top: 3.05em; left: 0em; }
 		.panda .torso .left-arm .bottom .colour { 
-			width: 8.3em; height: 5.8em; 
-			-moz-border-radius: 1.5em 6.8em 5.3em 3em / 2.9em 3.1em 2.7em 2.9em;
+			width: 8.3em; height: 5.8em;
+			@include border-top-left-radius(1.5em 2.9em);
+			@include border-top-right-radius(6.8em 3.1em);
+			@include border-bottom-right-radius(5.3em 2.7em);
+			@include border-bottom-left-radius(3em 2.9em);
 		}
 		.panda .torso .left-arm .mask { top: 0.65em; left: 4.8em; }
 		.panda .torso .left-arm .mask .colour { 
-			width: 6em; height: 3.9em; background-color: #ffffff; 
-			-moz-border-radius: 0.7em 0 0 6em / 1.8em 0 0 1.8em;
+			width: 6em; height: 3.9em; background-color: $panda-body;
+			@include border-top-left-radius(0.7em 1.8em);
+			@include border-bottom-left-radius(6em 1.8em);
 		}
 		
 		.panda .torso .right-arm { top: 0em; left: 14.1em; z-index: 350; }
-		.panda .torso .right-arm .colour { background-color: #a02c2c; }
+		.panda .torso .right-arm .colour { background-color: $panda-right-arm; }
 		.panda .torso .right-arm .top { top: 0em; left: 2.9em; }
 		.panda .torso .right-arm .top .colour { 
 			width: 7em; height: 6em;
-			-moz-border-radius: 1em 6em 1em 6em / 1em 5em 1em 5em;
-			-moz-transform: skew(0deg, 20deg) rotate(-15deg);
-			-moz-transform-origin: 0 0;
+			@include border-top-left-radius(1em);
+			@include border-top-right-radius(6em 5em);
+			@include border-bottom-right-radius(1em);
+			@include border-bottom-left-radius(6em 5em);
+			@include apply-origin(0 0, false);
+			@include transform(skew(0deg, 20deg) rotate(-15deg));
 		}
 		.panda .torso .right-arm .bottom { top: 3.2em; left: 4.25em; }
 		.panda .torso .right-arm .bottom .colour { 
 			width: 6.8em; height: 5.95em;
-			-moz-border-radius: 3em 3em 3.8em 2.5em / 3.2em 3.5em 2.45em 2.45em;
+			@include border-top-left-radius(3em 3.2em);
+			@include border-top-right-radius(3em 3.5em);
+			@include border-bottom-right-radius(3.8em 2.45em);
+			@include border-bottom-left-radius(2.5em 2.45em);
 		}
-		.panda .torso .right-arm .mask .colour { background-color: #ffffff; }
+		.panda .torso .right-arm .mask .colour { background-color: $panda-body; }
 		.panda .torso .right-arm .masktop { top: 1.05em; left: 2em; }
 		.panda .torso .right-arm .masktop .colour { 
 			width: 3em; height: 3em;
-			-moz-transform: rotate(-29deg);
-			-moz-border-radius: 0.1em 0.1em 0.1em 0.1em;
+			@include transform(rotate(-29deg));
+			@include border-radius(0.1em);
 		}
 		.panda .torso .right-arm .maskbottom { top: 4.25em; left: 2.25em; }
 		.panda .torso .right-arm .maskbottom .colour { 
 			width: 4em; height: 1em;
-			-moz-transform: rotate(-65deg);
-			-moz-border-radius: 0.1em 0.1em 0.1em 0.1em;
+			@include transform(rotate(-65deg));
+			@include border-radius(0.1em);
 		}
 	
 		.panda .torso .left-foot { top: 9.5em; left: 0.5em; z-index: 310; }
-		.panda .torso .left-foot .colour { background-color: #8bcfdf; }
+		.panda .torso .left-foot .colour { background-color: $panda-left-foot; }
 		.panda .torso .left-foot .left { top: 1.15em; left: 1.1em; }
 		.panda .torso .left-foot .left .colour { 
 			width: 6em; height: 10em;
-			-moz-transform: rotate(-48deg); 
-			-moz-border-radius: 3em 3em 1em 3.5em / 3em 4em 1em 7em;
+			@include transform(rotate(-48deg));
+			@include border-top-left-radius(3em);
+			@include border-top-right-radius(3em 4em);
+			@include border-bottom-right-radius(1em);
+			@include border-bottom-left-radius(3.5em 7em);
 		}
 		.panda .torso .left-foot .middle { top: 0em; left: 4em; }
 		.panda .torso .left-foot .middle .colour { 
 			width: 7em; height: 8.4em;
-			-moz-transform: rotate(-40deg); 
-			-moz-border-radius: 1em 6em 6.2em 0.3em / 1em 2em 5em 0.3em;
+			@include transform(rotate(-40deg));
+			@include border-top-left-radius(1em);
+			@include border-top-right-radius(6em 2em);
+			@include border-bottom-right-radius(6.2em 5em);
+			@include border-bottom-left-radius(0.3em 0.3em);
 		}
 		.panda .torso .left-foot .right { top: 4em; left: 10em; }
 		.panda .torso .left-foot .right .colour { 
-			width: 2em; height: 2em; 
-			-moz-border-radius: 1em;
+			width: 2em; height: 2em;
+			@include border-radius(1em);
 		}
-		.panda .torso .left-foot .mask .colour { background-color: #dddddd; }
+		.panda .torso .left-foot .mask .colour { background-color: $panda-backdrop; }
 		.panda .torso .left-foot .masktop { top: 0.1em; left: 4.5em; }
 		.panda .torso .left-foot .masktop .colour { 
 			width: 1em; height: 2.2em;
-			-moz-transform: skew(-50deg, 25deg);
-			-moz-border-radius: 0 0 0.6em 0 / 0 0 0.6em 0;
+			@include transform(skew(-50deg, 25deg));
+			@include border-bottom-right-radius(0.6em);
 		}
 		.panda .torso .left-foot .maskbottom { top: 5.25em; left: 10.3em; }
 		.panda .torso .left-foot .maskbottom .colour { 
 			width: 2em; height: 2em;
-			-moz-border-radius: 1em;
+			@include border-radius(1em);			
 		}
 	
 		.panda .torso .right-foot { top: 7.6em; left: 17em; z-index: 320; }
-		.panda .torso .right-foot .colour { background-color: #88aa00; }
+		.panda .torso .right-foot .colour { background-color: $panda-right-foot; }
 		.panda .torso .right-foot .left { top: 1em; left: 0em; }
 		.panda .torso .right-foot .left .colour { 
 			width: 7em; height: 6.6em;
-			-moz-border-radius: 4em 0 2em 2em / 4em 0 2em 1em; 
-			-moz-transform: rotate(10deg); 
+			@include border-top-left-radius(4em);
+			@include border-bottom-right-radius(2em);
+			@include border-bottom-left-radius(2em 1em);
+			@include transform(rotate(10deg));
 		}
 		.panda .torso .right-foot .right { top: 0em; left: 5.3em; }
 		.panda .torso .right-foot .right .colour { 
 			width: 5.1em; height: 8.7em;
-			-moz-border-radius: 3.1em 2em 1.7em 0 / 6.7em 3.3em 3.5em 0; 
-			-moz-transform: rotate(20deg); 
+			@include border-top-left-radius(3.1em 6.7em);
+			@include border-top-right-radius(2em 3.3em);
+			@include border-bottom-right-radius(1.7em 3.5em);
+			@include transform(rotate(20deg));
 		}
 		.panda .torso .right-foot .mask { top: 0em; left: 5.8em; }
 		.panda .torso .right-foot .mask .colour { 
-			width: 1.8em; height: 1.65em; background-color: #dddddd; 
-			-moz-transform: skew(-50deg, 25deg);
-			-moz-border-radius: 0 0 0.8em 0 / 0 0 0.8em 0;
+			width: 1.8em; height: 1.65em; background-color: $panda-backdrop;
+			@include transform(skew(-50deg, 25deg));
+			@include border-bottom-right-radius(0.8em);
 		}
-		
-		
-	
-	
