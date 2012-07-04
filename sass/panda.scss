@@ -1,6 +1,7 @@
 /* Imports */
 @import "compass/css3/transform";
 @import "compass/css3/border-radius";
+@import "compass/css3/transition";
 
 /* Colours */
 $canvas: #ededed;
@@ -32,7 +33,7 @@ $panda-right-foot: #88aa00;
 			width: 60em;
 			height: 30em;
 			background: $panda-backdrop;
-			font-size: 1em;
+			font-size: 2em;
 			z-index: 100;
 		}
 
@@ -52,210 +53,279 @@ $panda-right-foot: #88aa00;
 			.panda .colour { width: 5em; height: 5em; background-color: #000000; }
 			.panda .piece { position: absolute; }
 	
-		.panda .background { display: block !important; }
-		.panda .background img.two { display: none !important; }
-		.panda .background img.one { width: 30em; height: 30em; opacity: 1; z-index: 200; top: 0em; left: 30em; }
+		/* Static stles */
 	
-		.panda .head { top: 0em; left: 4.2em; z-index: 400; }
+			.panda .background { display: block !important; }
+			.panda .background img.two { display: none !important; }
+			.panda .background img.one { width: 30em; height: 30em; opacity: 1; z-index: 200; top: 0em; left: 30em; }
 		
-		.panda .head .body { top: 0.9em; left: 2.5em; z-index: 420; }
-		.panda .head .body .colour { 
-			width: 14.1em; height: 11.5em; background-color: $panda-body;
-			@include border-top-left-radius(6.2em 5.5em);
-			@include border-top-right-radius(7.5em 7.6em);
-			@include border-bottom-right-radius(2.5em 3.4em);
-			@include border-bottom-left-radius(4.9em 3em);
-		}
+			.panda .head { top: 0em; left: 4.2em; z-index: 400; }
+			
+			.panda .head .body { 
+				top: 0.9em; left: 2.5em; z-index: 420;
+				&:hover { 
+					top: -0.9em;
+				}
+			}
+			.panda .head .body .colour { 
+				width: 14.1em; height: 11.5em; background-color: $panda-body;
+				@include border-top-left-radius(6.2em 5.5em);
+				@include border-top-right-radius(7.5em 7.6em);
+				@include border-bottom-right-radius(2.5em 3.4em);
+				@include border-bottom-left-radius(4.9em 3em);
+			}
+			
+			.panda .head .face { 
+				top: 4.6em; left: 5.3em; z-index: 430; 
+				&:hover { 
+					top: 3.6em;
+				}
+			}
+			.panda .head .face .colour { top: 4.6em; left: 9.5em; background-color: $panda-face; }
+			
+			.panda .head .face .left-eye { top: 0.7em; left: 0em; }
+			.panda .head .face .left-eye .colour { 
+				width: 4.3em; height: 4.1em;
+				@include border-top-left-radius(1.8em 1.8em);
+				@include border-top-right-radius(2.1em 2em);
+				@include border-bottom-right-radius(3.1em 1.8em);
+				@include border-bottom-left-radius(1.4em 1.8em);
+			}
+			
+			.panda .head .face .right-eye { top: 0em; left: 7.3em; }
+			.panda .head .face .right-eye .colour { 
+				width: 2.7em; height: 3.4em;
+				@include border-top-left-radius(1.2em 1.3em);
+				@include border-top-right-radius(1.1em 1.2em);
+				@include border-bottom-right-radius(1em 1.1em);
+				@include border-bottom-left-radius(1.7em 1.5em);
+			}	
+			
+			.panda .head .face .nose { top: 3.85em; left: 5.2em; }
+			.panda .head .face .nose .colour { 
+				width: 4em; height: 2.8em;
+				@include border-bottom-right-radius(2.9em 3em);
+				@include border-bottom-left-radius(1.4em 2.2em);
+			}
+			.panda .head .face .mask .colour { background-color: $panda-body; }
+			.panda .head .face .nosemask { top: 3.55em; left: 5em; }
+			.panda .head .face .nosemask .colour { 
+				width: 4.4em; height: 2.6em;
+				@include border-bottom-right-radius(2.9em 3em);
+				@include border-bottom-left-radius(1.4em 2.2em);
+			}
 		
-		.panda .head .face { top: 4.6em; left: 5.3em; z-index: 430; }
-		.panda .head .face .colour { top: 4.6em; left: 9.5em; background-color: $panda-face; }
+			.panda .head .left-ear { 
+				top: 2.1em; left: 0em; z-index: 440; 
+				&:hover { 
+					top: 1.1em;
+					left: -1em;
+				}
+			}
+			.panda .head .left-ear .ear .colour { 
+				width: 4.8em; height: 8.3em; background-color: $panda-left-ear;
+				@include border-top-left-radius(3.4em 4.6em);
+				@include border-top-right-radius(1em);
+				@include border-bottom-right-radius(2.3em 7.3em);
+				@include border-bottom-left-radius(2.5em 3.2em);
+			}
+			.panda .head .left-ear .mask { top: 0.3em; left: 3.6em; }
+			.panda .head .left-ear .mask .colour { 
+				width: 1.5em; height: 8em; background-color: $panda-body;
+				@include border-top-left-radius(1em 4em);
+				@include border-bottom-left-radius(1em 4em);
+				@include transform(rotate(13deg));
+			}
 		
-		.panda .head .face .left-eye { top: 0.7em; left: 0em; }
-		.panda .head .face .left-eye .colour { 
-			width: 4.3em; height: 4.1em;
-			@include border-top-left-radius(1.8em 1.8em);
-			@include border-top-right-radius(2.1em 2em);
-			@include border-bottom-right-radius(3.1em 1.8em);
-			@include border-bottom-left-radius(1.4em 1.8em);
-		}
+			.panda .head .right-ear { 
+				top: 0em; left: 10.8em; z-index: 410; 
+				&:hover { 
+					top: -1em;
+					left: 11.8em;
+				}
+			}
+			.panda .head .right-ear .colour { 
+				width: 4em; height: 7.5em; background-color: $panda-right-ear;
+				@include border-top-left-radius(1em 3em);
+				@include border-top-right-radius(2.9em 3em);
+				@include border-bottom-right-radius(3.7em 5em);
+				@include border-bottom-left-radius(1em 2em);
+				@include apply-origin(1.7em 2.1em, false);
+				@include transform(rotate(-50deg));
+			}
+			
+			.panda .torso { top: 10.5em; left: 0.9em; z-index: 300; }
+			
+			.panda .torso .body { 
+				top: 0.9em; left: 7em; z-index: 330; 
+				&:hover { 
+					top: 1.9em;
+				}
+			}
+			.panda .torso .body .colour { 
+				width: 14.1em; height: 14.5em; background-color: $panda-body;
+				@include border-top-left-radius(3em);
+				@include border-top-right-radius(3em);
+				@include border-bottom-right-radius(6.5em 9.5em);
+				@include border-bottom-left-radius(7.2em 10.5em);
+			}
 		
-		.panda .head .face .right-eye { top: 0em; left: 7.3em; }
-		.panda .head .face .right-eye .colour { 
-			width: 2.7em; height: 3.4em;
-			@include border-top-left-radius(1.2em 1.3em);
-			@include border-top-right-radius(1.1em 1.2em);
-			@include border-bottom-right-radius(1em 1.1em);
-			@include border-bottom-left-radius(1.7em 1.5em);
-		}	
+			.panda .torso .left-arm { 
+				top: 1em; left: 3.6em; z-index: 340; 
+				&:hover { 
+					left: 2.6em;
+				}
+			}
+			.panda .torso .left-arm .colour { background-color: $panda-left-arm; }
+			.panda .torso .left-arm .top { top: 0em; left: 0em; }
+			.panda .torso .left-arm .top .colour { 
+				width: 6.5em; height: 6em;
+				@include border-top-left-radius(6.5em 6em);
+				@include border-bottom-right-radius(5em);
+			}
+			.panda .torso .left-arm .bottom { top: 3.05em; left: 0em; }
+			.panda .torso .left-arm .bottom .colour { 
+				width: 8.3em; height: 5.8em;
+				@include border-top-left-radius(1.5em 2.9em);
+				@include border-top-right-radius(6.8em 3.1em);
+				@include border-bottom-right-radius(5.3em 2.7em);
+				@include border-bottom-left-radius(3em 2.9em);
+			}
+			.panda .torso .left-arm .mask { top: 0.65em; left: 4.8em; }
+			.panda .torso .left-arm .mask .colour { 
+				width: 6em; height: 3.9em; background-color: $panda-body;
+				@include border-top-left-radius(0.7em 1.8em);
+				@include border-bottom-left-radius(6em 1.8em);
+			}
+			
+			.panda .torso .right-arm { 
+				top: 0em; left: 14.1em; z-index: 350; 
+				&:hover { 
+					left: 15.1em;
+				}
+			}
+			.panda .torso .right-arm .colour { background-color: $panda-right-arm; }
+			.panda .torso .right-arm .top { top: 0em; left: 2.9em; }
+			.panda .torso .right-arm .top .colour { 
+				width: 7em; height: 6em;
+				@include border-top-left-radius(1em);
+				@include border-top-right-radius(6em 5em);
+				@include border-bottom-right-radius(1em);
+				@include border-bottom-left-radius(6em 5em);
+				@include apply-origin(0 0, false);
+				@include transform(skew(0deg, 20deg) rotate(-15deg));
+			}
+			.panda .torso .right-arm .bottom { top: 3.2em; left: 4.25em; }
+			.panda .torso .right-arm .bottom .colour { 
+				width: 6.8em; height: 5.95em;
+				@include border-top-left-radius(3em 3.2em);
+				@include border-top-right-radius(3em 3.5em);
+				@include border-bottom-right-radius(3.8em 2.45em);
+				@include border-bottom-left-radius(2.5em 2.45em);
+			}
+			.panda .torso .right-arm .mask .colour { background-color: $panda-body; }
+			.panda .torso .right-arm .masktop { top: 1.05em; left: 2em; }
+			.panda .torso .right-arm .masktop .colour { 
+				width: 3em; height: 3em;
+				@include transform(rotate(-29deg));
+				@include border-radius(0.1em);
+			}
+			.panda .torso .right-arm .maskbottom { top: 4.25em; left: 2.25em; }
+			.panda .torso .right-arm .maskbottom .colour { 
+				width: 4em; height: 1em;
+				@include transform(rotate(-65deg));
+				@include border-radius(0.1em);
+			}
 		
-		.panda .head .face .nose { top: 3.85em; left: 5.2em; }
-		.panda .head .face .nose .colour { 
-			width: 4em; height: 2.8em;
-			@include border-bottom-right-radius(2.9em 3em);
-			@include border-bottom-left-radius(1.4em 2.2em);
-		}
-		.panda .head .face .mask .colour { background-color: $panda-body; }
-		.panda .head .face .nosemask { top: 3.55em; left: 5em; }
-		.panda .head .face .nosemask .colour { 
-			width: 4.4em; height: 2.6em;
-			@include border-bottom-right-radius(2.9em 3em);
-			@include border-bottom-left-radius(1.4em 2.2em);
-		}
-	
-		.panda .head .left-ear { top: 2.1em; left: 0em; z-index: 440; }
-		.panda .head .left-ear .ear .colour { 
-			width: 4.8em; height: 8.3em; background-color: $panda-left-ear;
-			@include border-top-left-radius(3.4em 4.6em);
-			@include border-top-right-radius(1em);
-			@include border-bottom-right-radius(2.3em 7.3em);
-			@include border-bottom-left-radius(2.5em 3.2em);
-		}
-		.panda .head .left-ear .mask { top: 0.3em; left: 3.6em; }
-		.panda .head .left-ear .mask .colour { 
-			width: 1.5em; height: 8em; background-color: $panda-body;
-			@include border-top-left-radius(1em 4em);
-			@include border-bottom-left-radius(1em 4em);
-			@include transform(rotate(13deg));
-		}
-	
-		.panda .head .right-ear { top: 0em; left: 10.8em; z-index: 410; }
-		.panda .head .right-ear .colour { 
-			width: 4em; height: 7.5em; background-color: $panda-right-ear;
-			@include border-top-left-radius(1em 3em);
-			@include border-top-right-radius(2.9em 3em);
-			@include border-bottom-right-radius(3.7em 5em);
-			@include border-bottom-left-radius(1em 2em);
-			@include apply-origin(1.7em 2.1em, false);
-			@include transform(rotate(-50deg));
-		}
+			.panda .torso .left-foot { 
+				top: 9.5em; 
+				left: 0.5em; 
+				z-index: 310;
+				&:hover { 
+					top: 10.5em; 
+					left: -0.5em; 
+				}
+			}
+			.panda .torso .left-foot .colour { background-color: $panda-left-foot; }
+			.panda .torso .left-foot .left { top: 1.15em; left: 1.1em; }
+			.panda .torso .left-foot .left .colour { 
+				width: 6em; height: 10em;
+				@include transform(rotate(-48deg));
+				@include border-top-left-radius(3em);
+				@include border-top-right-radius(3em 4em);
+				@include border-bottom-right-radius(1em);
+				@include border-bottom-left-radius(3.5em 7em);
+			}
+			.panda .torso .left-foot .middle { top: 0em; left: 4em; }
+			.panda .torso .left-foot .middle .colour { 
+				width: 7em; height: 8.4em;
+				@include transform(rotate(-40deg));
+				@include border-top-left-radius(1em);
+				@include border-top-right-radius(6em 2em);
+				@include border-bottom-right-radius(6.2em 5em);
+				@include border-bottom-left-radius(0.3em 0.3em);
+			}
+			.panda .torso .left-foot .right { top: 4em; left: 10em; }
+			.panda .torso .left-foot .right .colour { 
+				width: 2em; height: 2em;
+				@include border-radius(1em);
+			}
+			.panda .torso .left-foot .mask .colour { background-color: $panda-backdrop; }
+			.panda .torso .left-foot .masktop { top: 0.1em; left: 4.5em; }
+			.panda .torso .left-foot .masktop .colour { 
+				width: 1em; height: 2.2em;
+				@include transform(skew(-50deg, 25deg));
+				@include border-bottom-right-radius(0.6em);
+			}
+			.panda .torso .left-foot .maskbottom { top: 5.25em; left: 10.3em; }
+			.panda .torso .left-foot .maskbottom .colour { 
+				width: 2em; height: 2em;
+				@include border-radius(1em);			
+			}
 		
-		.panda .torso { top: 10.5em; left: 0.9em; z-index: 300; }
+			.panda .torso .right-foot { 
+				top: 7.6em; left: 17em; z-index: 320; 
+				&:hover { 
+					top: 8.6em;
+					left: 18em;
+				}
+			}
+			.panda .torso .right-foot .colour { background-color: $panda-right-foot; }
+			.panda .torso .right-foot .left { top: 1em; left: 0em; }
+			.panda .torso .right-foot .left .colour { 
+				width: 7em; height: 6.6em;
+				@include border-top-left-radius(4em);
+				@include border-bottom-right-radius(2em);
+				@include border-bottom-left-radius(2em 1em);
+				@include transform(rotate(10deg));
+			}
+			.panda .torso .right-foot .right { top: 0em; left: 5.3em; }
+			.panda .torso .right-foot .right .colour { 
+				width: 5.1em; height: 8.7em;
+				@include border-top-left-radius(3.1em 6.7em);
+				@include border-top-right-radius(2em 3.3em);
+				@include border-bottom-right-radius(1.7em 3.5em);
+				@include transform(rotate(20deg));
+			}
+			.panda .torso .right-foot .mask { top: 0em; left: 5.8em; }
+			.panda .torso .right-foot .mask .colour { 
+				width: 1.8em; height: 1.65em; background-color: $panda-backdrop;
+				@include transform(skew(-50deg, 25deg));
+				@include border-bottom-right-radius(0.8em);
+			}
+			
+		/* Animation Styles */
 		
-		.panda .torso .body { top: 0.9em; left: 7em; z-index: 330; }
-		.panda .torso .body .colour { 
-			width: 14.1em; height: 14.5em; background-color: $panda-body;
-			@include border-top-left-radius(3em);
-			@include border-top-right-radius(3em);
-			@include border-bottom-right-radius(6.5em 9.5em);
-			@include border-bottom-left-radius(7.2em 10.5em);
-		}
-	
-		.panda .torso .left-arm { top: 1em; left: 3.6em; z-index: 340; }
-		.panda .torso .left-arm .colour { background-color: $panda-left-arm; }
-		.panda .torso .left-arm .top { top: 0em; left: 0em; }
-		.panda .torso .left-arm .top .colour { 
-			width: 6.5em; height: 6em;
-			@include border-top-left-radius(6.5em 6em);
-			@include border-bottom-right-radius(5em);
-		}
-		.panda .torso .left-arm .bottom { top: 3.05em; left: 0em; }
-		.panda .torso .left-arm .bottom .colour { 
-			width: 8.3em; height: 5.8em;
-			@include border-top-left-radius(1.5em 2.9em);
-			@include border-top-right-radius(6.8em 3.1em);
-			@include border-bottom-right-radius(5.3em 2.7em);
-			@include border-bottom-left-radius(3em 2.9em);
-		}
-		.panda .torso .left-arm .mask { top: 0.65em; left: 4.8em; }
-		.panda .torso .left-arm .mask .colour { 
-			width: 6em; height: 3.9em; background-color: $panda-body;
-			@include border-top-left-radius(0.7em 1.8em);
-			@include border-bottom-left-radius(6em 1.8em);
-		}
-		
-		.panda .torso .right-arm { top: 0em; left: 14.1em; z-index: 350; }
-		.panda .torso .right-arm .colour { background-color: $panda-right-arm; }
-		.panda .torso .right-arm .top { top: 0em; left: 2.9em; }
-		.panda .torso .right-arm .top .colour { 
-			width: 7em; height: 6em;
-			@include border-top-left-radius(1em);
-			@include border-top-right-radius(6em 5em);
-			@include border-bottom-right-radius(1em);
-			@include border-bottom-left-radius(6em 5em);
-			@include apply-origin(0 0, false);
-			@include transform(skew(0deg, 20deg) rotate(-15deg));
-		}
-		.panda .torso .right-arm .bottom { top: 3.2em; left: 4.25em; }
-		.panda .torso .right-arm .bottom .colour { 
-			width: 6.8em; height: 5.95em;
-			@include border-top-left-radius(3em 3.2em);
-			@include border-top-right-radius(3em 3.5em);
-			@include border-bottom-right-radius(3.8em 2.45em);
-			@include border-bottom-left-radius(2.5em 2.45em);
-		}
-		.panda .torso .right-arm .mask .colour { background-color: $panda-body; }
-		.panda .torso .right-arm .masktop { top: 1.05em; left: 2em; }
-		.panda .torso .right-arm .masktop .colour { 
-			width: 3em; height: 3em;
-			@include transform(rotate(-29deg));
-			@include border-radius(0.1em);
-		}
-		.panda .torso .right-arm .maskbottom { top: 4.25em; left: 2.25em; }
-		.panda .torso .right-arm .maskbottom .colour { 
-			width: 4em; height: 1em;
-			@include transform(rotate(-65deg));
-			@include border-radius(0.1em);
-		}
-	
-		.panda .torso .left-foot { top: 9.5em; left: 0.5em; z-index: 310; }
-		.panda .torso .left-foot .colour { background-color: $panda-left-foot; }
-		.panda .torso .left-foot .left { top: 1.15em; left: 1.1em; }
-		.panda .torso .left-foot .left .colour { 
-			width: 6em; height: 10em;
-			@include transform(rotate(-48deg));
-			@include border-top-left-radius(3em);
-			@include border-top-right-radius(3em 4em);
-			@include border-bottom-right-radius(1em);
-			@include border-bottom-left-radius(3.5em 7em);
-		}
-		.panda .torso .left-foot .middle { top: 0em; left: 4em; }
-		.panda .torso .left-foot .middle .colour { 
-			width: 7em; height: 8.4em;
-			@include transform(rotate(-40deg));
-			@include border-top-left-radius(1em);
-			@include border-top-right-radius(6em 2em);
-			@include border-bottom-right-radius(6.2em 5em);
-			@include border-bottom-left-radius(0.3em 0.3em);
-		}
-		.panda .torso .left-foot .right { top: 4em; left: 10em; }
-		.panda .torso .left-foot .right .colour { 
-			width: 2em; height: 2em;
-			@include border-radius(1em);
-		}
-		.panda .torso .left-foot .mask .colour { background-color: $panda-backdrop; }
-		.panda .torso .left-foot .masktop { top: 0.1em; left: 4.5em; }
-		.panda .torso .left-foot .masktop .colour { 
-			width: 1em; height: 2.2em;
-			@include transform(skew(-50deg, 25deg));
-			@include border-bottom-right-radius(0.6em);
-		}
-		.panda .torso .left-foot .maskbottom { top: 5.25em; left: 10.3em; }
-		.panda .torso .left-foot .maskbottom .colour { 
-			width: 2em; height: 2em;
-			@include border-radius(1em);			
-		}
-	
-		.panda .torso .right-foot { top: 7.6em; left: 17em; z-index: 320; }
-		.panda .torso .right-foot .colour { background-color: $panda-right-foot; }
-		.panda .torso .right-foot .left { top: 1em; left: 0em; }
-		.panda .torso .right-foot .left .colour { 
-			width: 7em; height: 6.6em;
-			@include border-top-left-radius(4em);
-			@include border-bottom-right-radius(2em);
-			@include border-bottom-left-radius(2em 1em);
-			@include transform(rotate(10deg));
-		}
-		.panda .torso .right-foot .right { top: 0em; left: 5.3em; }
-		.panda .torso .right-foot .right .colour { 
-			width: 5.1em; height: 8.7em;
-			@include border-top-left-radius(3.1em 6.7em);
-			@include border-top-right-radius(2em 3.3em);
-			@include border-bottom-right-radius(1.7em 3.5em);
-			@include transform(rotate(20deg));
-		}
-		.panda .torso .right-foot .mask { top: 0em; left: 5.8em; }
-		.panda .torso .right-foot .mask .colour { 
-			width: 1.8em; height: 1.65em; background-color: $panda-backdrop;
-			@include transform(skew(-50deg, 25deg));
-			@include border-bottom-right-radius(0.8em);
-		}
+			.panda .head .body,
+			.panda .head .face,
+			.panda .head .left-ear,
+			.panda .head .right-ear,
+			.panda .torso .body,
+			.panda .torso .left-arm,
+			.panda .torso .right-arm,
+			.panda .torso .left-foot,
+			.panda .torso .right-foot {
+				@include transition-property(top, left);
+				@include transition-duration(100ms);
+				@include transition-timing-function(ease-in);
+			}
