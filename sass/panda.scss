@@ -15,41 +15,49 @@ $panda-right-arm: #a02c2c;
 $panda-left-foot: #8bcfdf;
 $panda-right-foot: #88aa00;
 
+/* Sizes: w x h
+head 334x248 55.8% x 41.4%
+-- face 200x133 61% x 53%
+-- left-ear 119x166 36.8% x 67% 
+torso 557x385 92.9% x 64.2%
+-- left-arm 167x178 31% x 46.3%
+-- right-arm 159x181 28.7% x 47.2%
+-- left-foot 249x196 44.8% x 51%
+-- right-foot 226x169 40.7% x 44%
+
+ */
+
 /* Page styles */
 	
 	/* 1em to equal 10px, anything sized in em's will shrink/grow depending on font-size % used */
-	body {
-		font-size: 62.5%;
-	}
+	
+		body {
+			font-size: 62.5%;
+		}
+		
+	/* Keep those images responsive */
 
-	.canvas { background-color: $canvas; }
+		img { max-width: 100%; } 
 
 /* Panda CSS pieces */
 	
 	/* Container */
 	
+		.canvas { position: relative; }
+	
 		.panda { 
 			position: relative;
-			width: 60em;
+			width: 30em;
 			height: 30em;
 			background: $panda-backdrop;
 			font-size: 2em;
 			z-index: 100;
 		}
 
-	/* Debug */
-
-		.panda-debug .background { display: block !important; }
-		.panda-debug .background img.one, .panda .background img.two { width: 30em; height: 30em; opacity: 1; z-index: 200; }
-		.panda-debug .background img.one { top: 0em; left: 30em; }
-		.panda-debug .background img.two { top: 0em; left: 0em; }
-		.panda-debug .piece { opacity: 0.5; } 
-		/*.panda-debug .piece { opacity: 0.8; }*/
-		.panda-debug .colour { border: 0.1em solid #ff0000; }
-		
 	/* Panda Bits */
 	
 		/* Defaults */
+		
 			.panda .colour { width: 5em; height: 5em; background-color: #000000; }
 			.panda .piece { position: absolute; }
 	
@@ -59,16 +67,28 @@ $panda-right-foot: #88aa00;
 			.panda .background img.two { display: none !important; }
 			.panda .background img.one { width: 30em; height: 30em; opacity: 1; z-index: 200; top: 0em; left: 30em; }
 		
-			.panda .head { top: 0em; left: 4.2em; z-index: 400; }
+			.panda .head { 
+				top: 0%; 
+				left: 14%; 
+				z-index: 400;
+				width: 55.8%;
+				height: 41.4%;
+			}
 			
 			.panda .head .body { 
-				top: 0.9em; left: 2.5em; z-index: 420;
+				top: 7%; 
+				left: 15%; 
+				z-index: 420;
+				width: 100%;
+				height: 100%;
 				&:hover { 
-					top: -0.9em;
+					top: -7%;
 				}
 			}
 			.panda .head .body .colour { 
-				width: 14.1em; height: 11.5em; background-color: $panda-body;
+				width: 85.5%; 
+				height: 93%; 
+				background-color: $panda-body;
 				@include border-top-left-radius(6.2em 5.5em);
 				@include border-top-right-radius(7.5em 7.6em);
 				@include border-bottom-right-radius(2.5em 3.4em);
@@ -76,9 +96,13 @@ $panda-right-foot: #88aa00;
 			}
 			
 			.panda .head .face { 
-				top: 4.6em; left: 5.3em; z-index: 430; 
+				top: 36%; 
+				left: 31%; 
+				z-index: 430; 
+				width: 61%;
+				height: 53%;
 				&:hover { 
-					top: 3.6em;
+					top: 26%;
 				}
 			}
 			.panda .head .face .colour { top: 4.6em; left: 9.5em; background-color: $panda-face; }
@@ -116,10 +140,14 @@ $panda-right-foot: #88aa00;
 			}
 		
 			.panda .head .left-ear { 
-				top: 2.1em; left: 0em; z-index: 440; 
+				top: 16%; 
+				left: 0%; 
+				z-index: 440; 
+				width: 35.8%; 
+				height: 67%;
 				&:hover { 
-					top: 1.1em;
-					left: -1em;
+					top: 8%;
+					left: -8%;
 				}
 			}
 			.panda .head .left-ear .ear .colour { 
@@ -154,7 +182,13 @@ $panda-right-foot: #88aa00;
 				@include transform(rotate(-50deg));
 			}
 			
-			.panda .torso { top: 10.5em; left: 0.9em; z-index: 300; }
+			.panda .torso { 
+				top: 35%; 
+				left: 3%; 
+				z-index: 300;
+				width: 92.9%;
+				height: 64.2%;
+			}
 			
 			.panda .torso .body { 
 				top: 0.9em; left: 7em; z-index: 330; 
@@ -169,9 +203,13 @@ $panda-right-foot: #88aa00;
 				@include border-bottom-right-radius(6.5em 9.5em);
 				@include border-bottom-left-radius(7.2em 10.5em);
 			}
-		
+			
 			.panda .torso .left-arm { 
-				top: 1em; left: 3.6em; z-index: 340; 
+				top: 1em; 
+				left: 3.6em; 
+				z-index: 340; 
+				width: 31%;
+				height: 46.3%;
 				&:hover { 
 					left: 2.6em;
 				}
@@ -199,7 +237,11 @@ $panda-right-foot: #88aa00;
 			}
 			
 			.panda .torso .right-arm { 
-				top: 0em; left: 14.1em; z-index: 350; 
+				top: 0em; 
+				left: 14.1em; 
+				z-index: 350; 
+				width: 28.7%;
+				height: 47.2%;
 				&:hover { 
 					left: 15.1em;
 				}
@@ -236,11 +278,13 @@ $panda-right-foot: #88aa00;
 				@include transform(rotate(-65deg));
 				@include border-radius(0.1em);
 			}
-		
+					
 			.panda .torso .left-foot { 
 				top: 9.5em; 
 				left: 0.5em; 
 				z-index: 310;
+				width: 44.8%;
+				height: 51%;
 				&:hover { 
 					top: 10.5em; 
 					left: -0.5em; 
@@ -282,9 +326,13 @@ $panda-right-foot: #88aa00;
 				width: 2em; height: 2em;
 				@include border-radius(1em);			
 			}
-		
+				
 			.panda .torso .right-foot { 
-				top: 7.6em; left: 17em; z-index: 320; 
+				top: 7.6em; 
+				left: 17em; 
+				z-index: 320; 
+				width: 40.7%;
+				height: 44%;
 				&:hover { 
 					top: 8.6em;
 					left: 18em;
@@ -325,7 +373,28 @@ $panda-right-foot: #88aa00;
 			.panda .torso .right-arm,
 			.panda .torso .left-foot,
 			.panda .torso .right-foot {
-				@include transition-property(top, left);
+				@include transition-property(comma-list(top, left));
 				@include transition-duration(100ms);
 				@include transition-timing-function(ease-in);
 			}
+			
+		/* Debug */
+
+			.debug .panda, .debug .panda-reference { 
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.debug .panda { background: none; }
+			.debug .panda-reference { display: block !important; z-index: 99; }
+			.debug .piece { opacity: 0.7; } 
+			.debug .piece .colour { background: green !important; } 
+			.debug .panda .head,
+			.panda .head .face,
+			.panda .head .left-ear,
+			.debug .panda .torso,
+			.panda .torso .left-arm,
+			.panda .torso .right-arm,
+			.panda .torso .left-foot,
+			.panda .torso .right-foot { border: 0.1em solid red; }
+		
