@@ -44,29 +44,22 @@ img {
 /* Panda Bits */
 /* Defaults */
 /* line 61, ../sass/panda.scss */
-.panda .colour {
-  width: 5em;
-  height: 5em;
-  background-color: #000000;
-}
-
-/* line 62, ../sass/panda.scss */
 .panda .piece {
   position: absolute;
 }
 
 /* Static stles */
-/* line 66, ../sass/panda.scss */
+/* line 65, ../sass/panda.scss */
 .panda .background {
   display: block !important;
 }
 
-/* line 67, ../sass/panda.scss */
+/* line 66, ../sass/panda.scss */
 .panda .background img.two {
   display: none !important;
 }
 
-/* line 68, ../sass/panda.scss */
+/* line 67, ../sass/panda.scss */
 .panda .background img.one {
   width: 30em;
   height: 30em;
@@ -76,7 +69,7 @@ img {
   left: 30em;
 }
 
-/* line 70, ../sass/panda.scss */
+/* line 69, ../sass/panda.scss */
 .panda .head {
   top: 0%;
   left: 14%;
@@ -85,47 +78,39 @@ img {
   height: 41.4%;
 }
 
-/* line 78, ../sass/panda.scss */
+/* line 77, ../sass/panda.scss */
 .panda .head .body {
   top: 7%;
   left: 15%;
   z-index: 420;
-  width: 100%;
-  height: 100%;
+  width: 85.5%;
+  height: 93%;
 }
-/* line 84, ../sass/panda.scss */
+/* line 83, ../sass/panda.scss */
 .panda .head .body:hover {
   top: -7%;
 }
 
-/* line 88, ../sass/panda.scss */
+/* line 87, ../sass/panda.scss */
 .panda .head .body .colour {
-  width: 85.5%;
-  height: 93%;
+  width: 100%;
+  height: 100%;
   background-color: white;
   -moz-border-radius-topleft: 6.2em 5.5em;
   -webkit-border-top-left-radius: 6.2em 5.5em;
-  -ms-border-top-left-radius: 6.2em 5.5em;
-  -o-border-top-left-radius: 6.2em 5.5em;
   border-top-left-radius: 6.2em 5.5em;
   -moz-border-radius-topright: 7.5em 7.6em;
   -webkit-border-top-right-radius: 7.5em 7.6em;
-  -ms-border-top-right-radius: 7.5em 7.6em;
-  -o-border-top-right-radius: 7.5em 7.6em;
   border-top-right-radius: 7.5em 7.6em;
   -moz-border-radius-bottomright: 2.5em 3.4em;
   -webkit-border-bottom-right-radius: 2.5em 3.4em;
-  -ms-border-bottom-right-radius: 2.5em 3.4em;
-  -o-border-bottom-right-radius: 2.5em 3.4em;
   border-bottom-right-radius: 2.5em 3.4em;
   -moz-border-radius-bottomleft: 4.9em 3em;
   -webkit-border-bottom-left-radius: 4.9em 3em;
-  -ms-border-bottom-left-radius: 4.9em 3em;
-  -o-border-bottom-left-radius: 4.9em 3em;
   border-bottom-left-radius: 4.9em 3em;
 }
 
-/* line 98, ../sass/panda.scss */
+/* line 97, ../sass/panda.scss */
 .panda .head .face {
   top: 36%;
   left: 31%;
@@ -133,132 +118,103 @@ img {
   width: 61%;
   height: 53%;
 }
-/* line 104, ../sass/panda.scss */
+/* line 103, ../sass/panda.scss */
 .panda .head .face:hover {
   top: 26%;
 }
 
 /* line 108, ../sass/panda.scss */
-.panda .head .face .colour {
-  top: 4.6em;
-  left: 9.5em;
-  background-color: #ff9955;
-}
-
-/* line 110, ../sass/panda.scss */
 .panda .head .face .left-eye {
-  top: 0.7em;
-  left: 0em;
-}
-
-/* line 111, ../sass/panda.scss */
-.panda .head .face .left-eye .colour {
-  width: 4.3em;
-  height: 4.1em;
+  top: 11%;
+  left: 0%;
+  width: 42.5%;
+  height: 62.5%;
+  background-color: #ff9955;
   -moz-border-radius-topleft: 1.8em 1.8em;
   -webkit-border-top-left-radius: 1.8em 1.8em;
-  -ms-border-top-left-radius: 1.8em 1.8em;
-  -o-border-top-left-radius: 1.8em 1.8em;
   border-top-left-radius: 1.8em 1.8em;
   -moz-border-radius-topright: 2.1em 2em;
   -webkit-border-top-right-radius: 2.1em 2em;
-  -ms-border-top-right-radius: 2.1em 2em;
-  -o-border-top-right-radius: 2.1em 2em;
   border-top-right-radius: 2.1em 2em;
   -moz-border-radius-bottomright: 3.1em 1.8em;
   -webkit-border-bottom-right-radius: 3.1em 1.8em;
-  -ms-border-bottom-right-radius: 3.1em 1.8em;
-  -o-border-bottom-right-radius: 3.1em 1.8em;
   border-bottom-right-radius: 3.1em 1.8em;
   -moz-border-radius-bottomleft: 1.4em 1.8em;
   -webkit-border-bottom-left-radius: 1.4em 1.8em;
-  -ms-border-bottom-left-radius: 1.4em 1.8em;
-  -o-border-bottom-left-radius: 1.4em 1.8em;
   border-bottom-left-radius: 1.4em 1.8em;
 }
 
-/* line 119, ../sass/panda.scss */
+/* line 120, ../sass/panda.scss */
 .panda .head .face .right-eye {
   top: 0em;
   left: 7.3em;
-}
-
-/* line 120, ../sass/panda.scss */
-.panda .head .face .right-eye .colour {
   width: 2.7em;
   height: 3.4em;
+  background-color: #ff9955;
   -moz-border-radius-topleft: 1.2em 1.3em;
   -webkit-border-top-left-radius: 1.2em 1.3em;
-  -ms-border-top-left-radius: 1.2em 1.3em;
-  -o-border-top-left-radius: 1.2em 1.3em;
   border-top-left-radius: 1.2em 1.3em;
   -moz-border-radius-topright: 1.1em 1.2em;
   -webkit-border-top-right-radius: 1.1em 1.2em;
-  -ms-border-top-right-radius: 1.1em 1.2em;
-  -o-border-top-right-radius: 1.1em 1.2em;
   border-top-right-radius: 1.1em 1.2em;
   -moz-border-radius-bottomright: 1em 1.1em;
   -webkit-border-bottom-right-radius: 1em 1.1em;
-  -ms-border-bottom-right-radius: 1em 1.1em;
-  -o-border-bottom-right-radius: 1em 1.1em;
   border-bottom-right-radius: 1em 1.1em;
   -moz-border-radius-bottomleft: 1.7em 1.5em;
   -webkit-border-bottom-left-radius: 1.7em 1.5em;
-  -ms-border-bottom-left-radius: 1.7em 1.5em;
-  -o-border-bottom-left-radius: 1.7em 1.5em;
   border-bottom-left-radius: 1.7em 1.5em;
 }
 
-/* line 128, ../sass/panda.scss */
+/*.panda .head .face .nose { top: 3.85em; left: 5.2em; }
+.panda .head .face .nose .colour { 
+	width: 4em; height: 2.8em;
+	@include border-bottom-right-radius(2.9em 3em);
+	@include border-bottom-left-radius(1.4em 2.2em);
+}
+.panda .head .face .mask .colour { background-color: $panda-body; }
+.panda .head .face .nosemask { top: 3.55em; left: 5em; }
+.panda .head .face .nosemask .colour { 
+	width: 4.4em; height: 2.6em;
+	@include border-bottom-right-radius(2.9em 3em);
+	@include border-bottom-left-radius(1.4em 2.2em);
+}*/
+/* line 148, ../sass/panda.scss */
 .panda .head .face .nose {
-  top: 3.85em;
-  left: 5.2em;
+  top: 55%;
+  left: 49%;
+  width: 43.4%;
+  height: 43%;
 }
 
-/* line 129, ../sass/panda.scss */
-.panda .head .face .nose .colour {
-  width: 4em;
-  height: 2.8em;
-  -moz-border-radius-bottomright: 2.9em 3em;
-  -webkit-border-bottom-right-radius: 2.9em 3em;
-  -ms-border-bottom-right-radius: 2.9em 3em;
-  -o-border-bottom-right-radius: 2.9em 3em;
-  border-bottom-right-radius: 2.9em 3em;
-  -moz-border-radius-bottomleft: 1.4em 2.2em;
-  -webkit-border-bottom-left-radius: 1.4em 2.2em;
-  -ms-border-bottom-left-radius: 1.4em 2.2em;
-  -o-border-bottom-left-radius: 1.4em 2.2em;
-  border-bottom-left-radius: 1.4em 2.2em;
-}
-
-/* line 134, ../sass/panda.scss */
-.panda .head .face .mask .colour {
+/* line 154, ../sass/panda.scss */
+.panda .head .face .nose .mask {
+  width: 100%;
+  height: 80%;
   background-color: white;
-}
-
-/* line 135, ../sass/panda.scss */
-.panda .head .face .nosemask {
-  top: 3.55em;
-  left: 5em;
-}
-
-/* line 136, ../sass/panda.scss */
-.panda .head .face .nosemask .colour {
-  width: 4.4em;
-  height: 2.6em;
   -moz-border-radius-bottomright: 2.9em 3em;
   -webkit-border-bottom-right-radius: 2.9em 3em;
-  -ms-border-bottom-right-radius: 2.9em 3em;
-  -o-border-bottom-right-radius: 2.9em 3em;
   border-bottom-right-radius: 2.9em 3em;
   -moz-border-radius-bottomleft: 1.4em 2.2em;
   -webkit-border-bottom-left-radius: 1.4em 2.2em;
-  -ms-border-bottom-left-radius: 1.4em 2.2em;
-  -o-border-bottom-left-radius: 1.4em 2.2em;
   border-bottom-left-radius: 1.4em 2.2em;
 }
 
-/* line 142, ../sass/panda.scss */
+/* line 161, ../sass/panda.scss */
+.panda .head .face .nose .colour {
+  top: 11%;
+  left: 2%;
+  width: 90%;
+  height: 80%;
+  background-color: #ff9955;
+  -moz-border-radius-bottomright: 2.9em 3em;
+  -webkit-border-bottom-right-radius: 2.9em 3em;
+  border-bottom-right-radius: 2.9em 3em;
+  -moz-border-radius-bottomleft: 1.4em 2.2em;
+  -webkit-border-bottom-left-radius: 1.4em 2.2em;
+  border-bottom-left-radius: 1.4em 2.2em;
+}
+
+/* line 173, ../sass/panda.scss */
 .panda .head .left-ear {
   top: 16%;
   left: 0%;
@@ -266,59 +222,47 @@ img {
   width: 35.8%;
   height: 67%;
 }
-/* line 148, ../sass/panda.scss */
+/* line 179, ../sass/panda.scss */
 .panda .head .left-ear:hover {
   top: 8%;
   left: -8%;
 }
 
-/* line 153, ../sass/panda.scss */
+/* line 184, ../sass/panda.scss */
 .panda .head .left-ear .ear .colour {
   width: 4.8em;
   height: 8.3em;
   background-color: purple;
   -moz-border-radius-topleft: 3.4em 4.6em;
   -webkit-border-top-left-radius: 3.4em 4.6em;
-  -ms-border-top-left-radius: 3.4em 4.6em;
-  -o-border-top-left-radius: 3.4em 4.6em;
   border-top-left-radius: 3.4em 4.6em;
   -moz-border-radius-topright: 1em;
   -webkit-border-top-right-radius: 1em;
-  -ms-border-top-right-radius: 1em;
-  -o-border-top-right-radius: 1em;
   border-top-right-radius: 1em;
   -moz-border-radius-bottomright: 2.3em 7.3em;
   -webkit-border-bottom-right-radius: 2.3em 7.3em;
-  -ms-border-bottom-right-radius: 2.3em 7.3em;
-  -o-border-bottom-right-radius: 2.3em 7.3em;
   border-bottom-right-radius: 2.3em 7.3em;
   -moz-border-radius-bottomleft: 2.5em 3.2em;
   -webkit-border-bottom-left-radius: 2.5em 3.2em;
-  -ms-border-bottom-left-radius: 2.5em 3.2em;
-  -o-border-bottom-left-radius: 2.5em 3.2em;
   border-bottom-left-radius: 2.5em 3.2em;
 }
 
-/* line 160, ../sass/panda.scss */
+/* line 191, ../sass/panda.scss */
 .panda .head .left-ear .mask {
   top: 0.3em;
   left: 3.6em;
 }
 
-/* line 161, ../sass/panda.scss */
+/* line 192, ../sass/panda.scss */
 .panda .head .left-ear .mask .colour {
   width: 1.5em;
   height: 8em;
   background-color: white;
   -moz-border-radius-topleft: 1em 4em;
   -webkit-border-top-left-radius: 1em 4em;
-  -ms-border-top-left-radius: 1em 4em;
-  -o-border-top-left-radius: 1em 4em;
   border-top-left-radius: 1em 4em;
   -moz-border-radius-bottomleft: 1em 4em;
   -webkit-border-bottom-left-radius: 1em 4em;
-  -ms-border-bottom-left-radius: 1em 4em;
-  -o-border-bottom-left-radius: 1em 4em;
   border-bottom-left-radius: 1em 4em;
   -webkit-transform: rotate(13deg);
   -moz-transform: rotate(13deg);
@@ -327,42 +271,34 @@ img {
   transform: rotate(13deg);
 }
 
-/* line 168, ../sass/panda.scss */
+/* line 199, ../sass/panda.scss */
 .panda .head .right-ear {
   top: 0em;
   left: 10.8em;
   z-index: 410;
 }
-/* line 170, ../sass/panda.scss */
+/* line 201, ../sass/panda.scss */
 .panda .head .right-ear:hover {
   top: -1em;
   left: 11.8em;
 }
 
-/* line 175, ../sass/panda.scss */
+/* line 206, ../sass/panda.scss */
 .panda .head .right-ear .colour {
   width: 4em;
   height: 7.5em;
   background-color: #ffdd55;
   -moz-border-radius-topleft: 1em 3em;
   -webkit-border-top-left-radius: 1em 3em;
-  -ms-border-top-left-radius: 1em 3em;
-  -o-border-top-left-radius: 1em 3em;
   border-top-left-radius: 1em 3em;
   -moz-border-radius-topright: 2.9em 3em;
   -webkit-border-top-right-radius: 2.9em 3em;
-  -ms-border-top-right-radius: 2.9em 3em;
-  -o-border-top-right-radius: 2.9em 3em;
   border-top-right-radius: 2.9em 3em;
   -moz-border-radius-bottomright: 3.7em 5em;
   -webkit-border-bottom-right-radius: 3.7em 5em;
-  -ms-border-bottom-right-radius: 3.7em 5em;
-  -o-border-bottom-right-radius: 3.7em 5em;
   border-bottom-right-radius: 3.7em 5em;
   -moz-border-radius-bottomleft: 1em 2em;
   -webkit-border-bottom-left-radius: 1em 2em;
-  -ms-border-bottom-left-radius: 1em 2em;
-  -o-border-bottom-left-radius: 1em 2em;
   border-bottom-left-radius: 1em 2em;
   -webkit-transform-origin: 1.7em 2.1em;
   -moz-transform-origin: 1.7em 2.1em;
@@ -376,7 +312,7 @@ img {
   transform: rotate(-50deg);
 }
 
-/* line 185, ../sass/panda.scss */
+/* line 216, ../sass/panda.scss */
 .panda .torso {
   top: 35%;
   left: 3%;
@@ -385,45 +321,37 @@ img {
   height: 64.2%;
 }
 
-/* line 193, ../sass/panda.scss */
+/* line 224, ../sass/panda.scss */
 .panda .torso .body {
   top: 0.9em;
   left: 7em;
   z-index: 330;
 }
-/* line 195, ../sass/panda.scss */
+/* line 226, ../sass/panda.scss */
 .panda .torso .body:hover {
   top: 1.9em;
 }
 
-/* line 199, ../sass/panda.scss */
+/* line 230, ../sass/panda.scss */
 .panda .torso .body .colour {
   width: 14.1em;
   height: 14.5em;
   background-color: white;
   -moz-border-radius-topleft: 3em;
   -webkit-border-top-left-radius: 3em;
-  -ms-border-top-left-radius: 3em;
-  -o-border-top-left-radius: 3em;
   border-top-left-radius: 3em;
   -moz-border-radius-topright: 3em;
   -webkit-border-top-right-radius: 3em;
-  -ms-border-top-right-radius: 3em;
-  -o-border-top-right-radius: 3em;
   border-top-right-radius: 3em;
   -moz-border-radius-bottomright: 6.5em 9.5em;
   -webkit-border-bottom-right-radius: 6.5em 9.5em;
-  -ms-border-bottom-right-radius: 6.5em 9.5em;
-  -o-border-bottom-right-radius: 6.5em 9.5em;
   border-bottom-right-radius: 6.5em 9.5em;
   -moz-border-radius-bottomleft: 7.2em 10.5em;
   -webkit-border-bottom-left-radius: 7.2em 10.5em;
-  -ms-border-bottom-left-radius: 7.2em 10.5em;
-  -o-border-bottom-left-radius: 7.2em 10.5em;
   border-bottom-left-radius: 7.2em 10.5em;
 }
 
-/* line 207, ../sass/panda.scss */
+/* line 238, ../sass/panda.scss */
 .panda .torso .left-arm {
   top: 1em;
   left: 3.6em;
@@ -431,94 +359,78 @@ img {
   width: 31%;
   height: 46.3%;
 }
-/* line 213, ../sass/panda.scss */
+/* line 244, ../sass/panda.scss */
 .panda .torso .left-arm:hover {
   left: 2.6em;
 }
 
-/* line 217, ../sass/panda.scss */
+/* line 248, ../sass/panda.scss */
 .panda .torso .left-arm .colour {
   background-color: #ccff00;
 }
 
-/* line 218, ../sass/panda.scss */
+/* line 249, ../sass/panda.scss */
 .panda .torso .left-arm .top {
   top: 0em;
   left: 0em;
 }
 
-/* line 219, ../sass/panda.scss */
+/* line 250, ../sass/panda.scss */
 .panda .torso .left-arm .top .colour {
   width: 6.5em;
   height: 6em;
   -moz-border-radius-topleft: 6.5em 6em;
   -webkit-border-top-left-radius: 6.5em 6em;
-  -ms-border-top-left-radius: 6.5em 6em;
-  -o-border-top-left-radius: 6.5em 6em;
   border-top-left-radius: 6.5em 6em;
   -moz-border-radius-bottomright: 5em;
   -webkit-border-bottom-right-radius: 5em;
-  -ms-border-bottom-right-radius: 5em;
-  -o-border-bottom-right-radius: 5em;
   border-bottom-right-radius: 5em;
 }
 
-/* line 224, ../sass/panda.scss */
+/* line 255, ../sass/panda.scss */
 .panda .torso .left-arm .bottom {
   top: 3.05em;
   left: 0em;
 }
 
-/* line 225, ../sass/panda.scss */
+/* line 256, ../sass/panda.scss */
 .panda .torso .left-arm .bottom .colour {
   width: 8.3em;
   height: 5.8em;
   -moz-border-radius-topleft: 1.5em 2.9em;
   -webkit-border-top-left-radius: 1.5em 2.9em;
-  -ms-border-top-left-radius: 1.5em 2.9em;
-  -o-border-top-left-radius: 1.5em 2.9em;
   border-top-left-radius: 1.5em 2.9em;
   -moz-border-radius-topright: 6.8em 3.1em;
   -webkit-border-top-right-radius: 6.8em 3.1em;
-  -ms-border-top-right-radius: 6.8em 3.1em;
-  -o-border-top-right-radius: 6.8em 3.1em;
   border-top-right-radius: 6.8em 3.1em;
   -moz-border-radius-bottomright: 5.3em 2.7em;
   -webkit-border-bottom-right-radius: 5.3em 2.7em;
-  -ms-border-bottom-right-radius: 5.3em 2.7em;
-  -o-border-bottom-right-radius: 5.3em 2.7em;
   border-bottom-right-radius: 5.3em 2.7em;
   -moz-border-radius-bottomleft: 3em 2.9em;
   -webkit-border-bottom-left-radius: 3em 2.9em;
-  -ms-border-bottom-left-radius: 3em 2.9em;
-  -o-border-bottom-left-radius: 3em 2.9em;
   border-bottom-left-radius: 3em 2.9em;
 }
 
-/* line 232, ../sass/panda.scss */
+/* line 263, ../sass/panda.scss */
 .panda .torso .left-arm .mask {
   top: 0.65em;
   left: 4.8em;
 }
 
-/* line 233, ../sass/panda.scss */
+/* line 264, ../sass/panda.scss */
 .panda .torso .left-arm .mask .colour {
   width: 6em;
   height: 3.9em;
   background-color: white;
   -moz-border-radius-topleft: 0.7em 1.8em;
   -webkit-border-top-left-radius: 0.7em 1.8em;
-  -ms-border-top-left-radius: 0.7em 1.8em;
-  -o-border-top-left-radius: 0.7em 1.8em;
   border-top-left-radius: 0.7em 1.8em;
   -moz-border-radius-bottomleft: 6em 1.8em;
   -webkit-border-bottom-left-radius: 6em 1.8em;
-  -ms-border-bottom-left-radius: 6em 1.8em;
-  -o-border-bottom-left-radius: 6em 1.8em;
   border-bottom-left-radius: 6em 1.8em;
 }
 
-/* line 239, ../sass/panda.scss */
+/* line 270, ../sass/panda.scss */
 .panda .torso .right-arm {
   top: 0em;
   left: 14.1em;
@@ -526,45 +438,37 @@ img {
   width: 28.7%;
   height: 47.2%;
 }
-/* line 245, ../sass/panda.scss */
+/* line 276, ../sass/panda.scss */
 .panda .torso .right-arm:hover {
   left: 15.1em;
 }
 
-/* line 249, ../sass/panda.scss */
+/* line 280, ../sass/panda.scss */
 .panda .torso .right-arm .colour {
   background-color: #a02c2c;
 }
 
-/* line 250, ../sass/panda.scss */
+/* line 281, ../sass/panda.scss */
 .panda .torso .right-arm .top {
   top: 0em;
   left: 2.9em;
 }
 
-/* line 251, ../sass/panda.scss */
+/* line 282, ../sass/panda.scss */
 .panda .torso .right-arm .top .colour {
   width: 7em;
   height: 6em;
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
-  -ms-border-top-left-radius: 1em;
-  -o-border-top-left-radius: 1em;
   border-top-left-radius: 1em;
   -moz-border-radius-topright: 6em 5em;
   -webkit-border-top-right-radius: 6em 5em;
-  -ms-border-top-right-radius: 6em 5em;
-  -o-border-top-right-radius: 6em 5em;
   border-top-right-radius: 6em 5em;
   -moz-border-radius-bottomright: 1em;
   -webkit-border-bottom-right-radius: 1em;
-  -ms-border-bottom-right-radius: 1em;
-  -o-border-bottom-right-radius: 1em;
   border-bottom-right-radius: 1em;
   -moz-border-radius-bottomleft: 6em 5em;
   -webkit-border-bottom-left-radius: 6em 5em;
-  -ms-border-bottom-left-radius: 6em 5em;
-  -o-border-bottom-left-radius: 6em 5em;
   border-bottom-left-radius: 6em 5em;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
@@ -578,50 +482,42 @@ img {
   transform: skew(0deg, 20deg) rotate(-15deg);
 }
 
-/* line 260, ../sass/panda.scss */
+/* line 291, ../sass/panda.scss */
 .panda .torso .right-arm .bottom {
   top: 3.2em;
   left: 4.25em;
 }
 
-/* line 261, ../sass/panda.scss */
+/* line 292, ../sass/panda.scss */
 .panda .torso .right-arm .bottom .colour {
   width: 6.8em;
   height: 5.95em;
   -moz-border-radius-topleft: 3em 3.2em;
   -webkit-border-top-left-radius: 3em 3.2em;
-  -ms-border-top-left-radius: 3em 3.2em;
-  -o-border-top-left-radius: 3em 3.2em;
   border-top-left-radius: 3em 3.2em;
   -moz-border-radius-topright: 3em 3.5em;
   -webkit-border-top-right-radius: 3em 3.5em;
-  -ms-border-top-right-radius: 3em 3.5em;
-  -o-border-top-right-radius: 3em 3.5em;
   border-top-right-radius: 3em 3.5em;
   -moz-border-radius-bottomright: 3.8em 2.45em;
   -webkit-border-bottom-right-radius: 3.8em 2.45em;
-  -ms-border-bottom-right-radius: 3.8em 2.45em;
-  -o-border-bottom-right-radius: 3.8em 2.45em;
   border-bottom-right-radius: 3.8em 2.45em;
   -moz-border-radius-bottomleft: 2.5em 2.45em;
   -webkit-border-bottom-left-radius: 2.5em 2.45em;
-  -ms-border-bottom-left-radius: 2.5em 2.45em;
-  -o-border-bottom-left-radius: 2.5em 2.45em;
   border-bottom-left-radius: 2.5em 2.45em;
 }
 
-/* line 268, ../sass/panda.scss */
+/* line 299, ../sass/panda.scss */
 .panda .torso .right-arm .mask .colour {
   background-color: white;
 }
 
-/* line 269, ../sass/panda.scss */
+/* line 300, ../sass/panda.scss */
 .panda .torso .right-arm .masktop {
   top: 1.05em;
   left: 2em;
 }
 
-/* line 270, ../sass/panda.scss */
+/* line 301, ../sass/panda.scss */
 .panda .torso .right-arm .masktop .colour {
   width: 3em;
   height: 3em;
@@ -637,13 +533,13 @@ img {
   border-radius: 0.1em;
 }
 
-/* line 275, ../sass/panda.scss */
+/* line 306, ../sass/panda.scss */
 .panda .torso .right-arm .maskbottom {
   top: 4.25em;
   left: 2.25em;
 }
 
-/* line 276, ../sass/panda.scss */
+/* line 307, ../sass/panda.scss */
 .panda .torso .right-arm .maskbottom .colour {
   width: 4em;
   height: 1em;
@@ -659,7 +555,7 @@ img {
   border-radius: 0.1em;
 }
 
-/* line 282, ../sass/panda.scss */
+/* line 313, ../sass/panda.scss */
 .panda .torso .left-foot {
   top: 9.5em;
   left: 0.5em;
@@ -667,24 +563,24 @@ img {
   width: 44.8%;
   height: 51%;
 }
-/* line 288, ../sass/panda.scss */
+/* line 319, ../sass/panda.scss */
 .panda .torso .left-foot:hover {
   top: 10.5em;
   left: -0.5em;
 }
 
-/* line 293, ../sass/panda.scss */
+/* line 324, ../sass/panda.scss */
 .panda .torso .left-foot .colour {
   background-color: #8bcfdf;
 }
 
-/* line 294, ../sass/panda.scss */
+/* line 325, ../sass/panda.scss */
 .panda .torso .left-foot .left {
   top: 1.15em;
   left: 1.1em;
 }
 
-/* line 295, ../sass/panda.scss */
+/* line 326, ../sass/panda.scss */
 .panda .torso .left-foot .left .colour {
   width: 6em;
   height: 10em;
@@ -695,33 +591,25 @@ img {
   transform: rotate(-48deg);
   -moz-border-radius-topleft: 3em;
   -webkit-border-top-left-radius: 3em;
-  -ms-border-top-left-radius: 3em;
-  -o-border-top-left-radius: 3em;
   border-top-left-radius: 3em;
   -moz-border-radius-topright: 3em 4em;
   -webkit-border-top-right-radius: 3em 4em;
-  -ms-border-top-right-radius: 3em 4em;
-  -o-border-top-right-radius: 3em 4em;
   border-top-right-radius: 3em 4em;
   -moz-border-radius-bottomright: 1em;
   -webkit-border-bottom-right-radius: 1em;
-  -ms-border-bottom-right-radius: 1em;
-  -o-border-bottom-right-radius: 1em;
   border-bottom-right-radius: 1em;
   -moz-border-radius-bottomleft: 3.5em 7em;
   -webkit-border-bottom-left-radius: 3.5em 7em;
-  -ms-border-bottom-left-radius: 3.5em 7em;
-  -o-border-bottom-left-radius: 3.5em 7em;
   border-bottom-left-radius: 3.5em 7em;
 }
 
-/* line 303, ../sass/panda.scss */
+/* line 334, ../sass/panda.scss */
 .panda .torso .left-foot .middle {
   top: 0em;
   left: 4em;
 }
 
-/* line 304, ../sass/panda.scss */
+/* line 335, ../sass/panda.scss */
 .panda .torso .left-foot .middle .colour {
   width: 7em;
   height: 8.4em;
@@ -732,33 +620,25 @@ img {
   transform: rotate(-40deg);
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
-  -ms-border-top-left-radius: 1em;
-  -o-border-top-left-radius: 1em;
   border-top-left-radius: 1em;
   -moz-border-radius-topright: 6em 2em;
   -webkit-border-top-right-radius: 6em 2em;
-  -ms-border-top-right-radius: 6em 2em;
-  -o-border-top-right-radius: 6em 2em;
   border-top-right-radius: 6em 2em;
   -moz-border-radius-bottomright: 6.2em 5em;
   -webkit-border-bottom-right-radius: 6.2em 5em;
-  -ms-border-bottom-right-radius: 6.2em 5em;
-  -o-border-bottom-right-radius: 6.2em 5em;
   border-bottom-right-radius: 6.2em 5em;
   -moz-border-radius-bottomleft: 0.3em 0.3em;
   -webkit-border-bottom-left-radius: 0.3em 0.3em;
-  -ms-border-bottom-left-radius: 0.3em 0.3em;
-  -o-border-bottom-left-radius: 0.3em 0.3em;
   border-bottom-left-radius: 0.3em 0.3em;
 }
 
-/* line 312, ../sass/panda.scss */
+/* line 343, ../sass/panda.scss */
 .panda .torso .left-foot .right {
   top: 4em;
   left: 10em;
 }
 
-/* line 313, ../sass/panda.scss */
+/* line 344, ../sass/panda.scss */
 .panda .torso .left-foot .right .colour {
   width: 2em;
   height: 2em;
@@ -769,18 +649,18 @@ img {
   border-radius: 1em;
 }
 
-/* line 317, ../sass/panda.scss */
+/* line 348, ../sass/panda.scss */
 .panda .torso .left-foot .mask .colour {
   background-color: #e0e0e0;
 }
 
-/* line 318, ../sass/panda.scss */
+/* line 349, ../sass/panda.scss */
 .panda .torso .left-foot .masktop {
   top: 0.1em;
   left: 4.5em;
 }
 
-/* line 319, ../sass/panda.scss */
+/* line 350, ../sass/panda.scss */
 .panda .torso .left-foot .masktop .colour {
   width: 1em;
   height: 2.2em;
@@ -791,18 +671,16 @@ img {
   transform: skew(-50deg, 25deg);
   -moz-border-radius-bottomright: 0.6em;
   -webkit-border-bottom-right-radius: 0.6em;
-  -ms-border-bottom-right-radius: 0.6em;
-  -o-border-bottom-right-radius: 0.6em;
   border-bottom-right-radius: 0.6em;
 }
 
-/* line 324, ../sass/panda.scss */
+/* line 355, ../sass/panda.scss */
 .panda .torso .left-foot .maskbottom {
   top: 5.25em;
   left: 10.3em;
 }
 
-/* line 325, ../sass/panda.scss */
+/* line 356, ../sass/panda.scss */
 .panda .torso .left-foot .maskbottom .colour {
   width: 2em;
   height: 2em;
@@ -813,7 +691,7 @@ img {
   border-radius: 1em;
 }
 
-/* line 330, ../sass/panda.scss */
+/* line 361, ../sass/panda.scss */
 .panda .torso .right-foot {
   top: 7.6em;
   left: 17em;
@@ -821,41 +699,35 @@ img {
   width: 40.7%;
   height: 44%;
 }
-/* line 336, ../sass/panda.scss */
+/* line 367, ../sass/panda.scss */
 .panda .torso .right-foot:hover {
   top: 8.6em;
   left: 18em;
 }
 
-/* line 341, ../sass/panda.scss */
+/* line 372, ../sass/panda.scss */
 .panda .torso .right-foot .colour {
   background-color: #88aa00;
 }
 
-/* line 342, ../sass/panda.scss */
+/* line 373, ../sass/panda.scss */
 .panda .torso .right-foot .left {
   top: 1em;
   left: 0em;
 }
 
-/* line 343, ../sass/panda.scss */
+/* line 374, ../sass/panda.scss */
 .panda .torso .right-foot .left .colour {
   width: 7em;
   height: 6.6em;
   -moz-border-radius-topleft: 4em;
   -webkit-border-top-left-radius: 4em;
-  -ms-border-top-left-radius: 4em;
-  -o-border-top-left-radius: 4em;
   border-top-left-radius: 4em;
   -moz-border-radius-bottomright: 2em;
   -webkit-border-bottom-right-radius: 2em;
-  -ms-border-bottom-right-radius: 2em;
-  -o-border-bottom-right-radius: 2em;
   border-bottom-right-radius: 2em;
   -moz-border-radius-bottomleft: 2em 1em;
   -webkit-border-bottom-left-radius: 2em 1em;
-  -ms-border-bottom-left-radius: 2em 1em;
-  -o-border-bottom-left-radius: 2em 1em;
   border-bottom-left-radius: 2em 1em;
   -webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);
@@ -864,30 +736,24 @@ img {
   transform: rotate(10deg);
 }
 
-/* line 350, ../sass/panda.scss */
+/* line 381, ../sass/panda.scss */
 .panda .torso .right-foot .right {
   top: 0em;
   left: 5.3em;
 }
 
-/* line 351, ../sass/panda.scss */
+/* line 382, ../sass/panda.scss */
 .panda .torso .right-foot .right .colour {
   width: 5.1em;
   height: 8.7em;
   -moz-border-radius-topleft: 3.1em 6.7em;
   -webkit-border-top-left-radius: 3.1em 6.7em;
-  -ms-border-top-left-radius: 3.1em 6.7em;
-  -o-border-top-left-radius: 3.1em 6.7em;
   border-top-left-radius: 3.1em 6.7em;
   -moz-border-radius-topright: 2em 3.3em;
   -webkit-border-top-right-radius: 2em 3.3em;
-  -ms-border-top-right-radius: 2em 3.3em;
-  -o-border-top-right-radius: 2em 3.3em;
   border-top-right-radius: 2em 3.3em;
   -moz-border-radius-bottomright: 1.7em 3.5em;
   -webkit-border-bottom-right-radius: 1.7em 3.5em;
-  -ms-border-bottom-right-radius: 1.7em 3.5em;
-  -o-border-bottom-right-radius: 1.7em 3.5em;
   border-bottom-right-radius: 1.7em 3.5em;
   -webkit-transform: rotate(20deg);
   -moz-transform: rotate(20deg);
@@ -896,13 +762,13 @@ img {
   transform: rotate(20deg);
 }
 
-/* line 358, ../sass/panda.scss */
+/* line 389, ../sass/panda.scss */
 .panda .torso .right-foot .mask {
   top: 0em;
   left: 5.8em;
 }
 
-/* line 359, ../sass/panda.scss */
+/* line 390, ../sass/panda.scss */
 .panda .torso .right-foot .mask .colour {
   width: 1.8em;
   height: 1.65em;
@@ -914,13 +780,11 @@ img {
   transform: skew(-50deg, 25deg);
   -moz-border-radius-bottomright: 0.8em;
   -webkit-border-bottom-right-radius: 0.8em;
-  -ms-border-bottom-right-radius: 0.8em;
-  -o-border-bottom-right-radius: 0.8em;
   border-bottom-right-radius: 0.8em;
 }
 
 /* Animation Styles */
-/* line 375, ../sass/panda.scss */
+/* line 406, ../sass/panda.scss */
 .panda .head .body,
 .panda .head .face,
 .panda .head .left-ear,
@@ -930,53 +794,50 @@ img {
 .panda .torso .right-arm,
 .panda .torso .left-foot,
 .panda .torso .right-foot {
-  -webkit-transition-property: comma-list(top, left);
-  -moz-transition-property: comma-list(top, left);
-  -ms-transition-property: comma-list(top, left);
-  -o-transition-property: comma-list(top, left);
-  transition-property: comma-list(top, left);
+  -webkit-transition-property: top, left;
+  -moz-transition-property: top, left;
+  -o-transition-property: top, left;
+  transition-property: top, left;
   -webkit-transition-duration: 100ms;
   -moz-transition-duration: 100ms;
-  -ms-transition-duration: 100ms;
   -o-transition-duration: 100ms;
   transition-duration: 100ms;
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
-  -ms-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
 
 /* Debug */
-/* line 383, ../sass/panda.scss */
+/* line 414, ../sass/panda.scss */
 .debug .panda, .debug .panda-reference {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-/* line 388, ../sass/panda.scss */
+/* line 419, ../sass/panda.scss */
 .debug .panda {
   background: none;
 }
 
-/* line 389, ../sass/panda.scss */
+/* line 420, ../sass/panda.scss */
 .debug .panda-reference {
   display: block !important;
   z-index: 99;
 }
 
-/* line 390, ../sass/panda.scss */
+/* line 421, ../sass/panda.scss */
 .debug .piece {
   opacity: 0.7;
 }
 
-/* line 391, ../sass/panda.scss */
+/* line 422, ../sass/panda.scss */
 .debug .piece .colour {
   background: green !important;
 }
 
-/* line 399, ../sass/panda.scss */
+/* line 430, ../sass/panda.scss */
 .debug .panda .head,
 .panda .head .face,
 .panda .head .left-ear,

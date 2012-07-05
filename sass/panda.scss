@@ -57,8 +57,7 @@ torso 557x385 92.9% x 64.2%
 	/* Panda Bits */
 	
 		/* Defaults */
-		
-			.panda .colour { width: 5em; height: 5em; background-color: #000000; }
+
 			.panda .piece { position: absolute; }
 	
 		/* Static stles */
@@ -79,15 +78,15 @@ torso 557x385 92.9% x 64.2%
 				top: 7%; 
 				left: 15%; 
 				z-index: 420;
-				width: 100%;
-				height: 100%;
+				width: 85.5%; 
+				height: 93%;
 				&:hover { 
 					top: -7%;
 				}
 			}
 			.panda .head .body .colour { 
-				width: 85.5%; 
-				height: 93%; 
+				width: 100%;
+				height: 100%; 
 				background-color: $panda-body;
 				@include border-top-left-radius(6.2em 5.5em);
 				@include border-top-right-radius(7.5em 7.6em);
@@ -105,27 +104,32 @@ torso 557x385 92.9% x 64.2%
 					top: 26%;
 				}
 			}
-			.panda .head .face .colour { top: 4.6em; left: 9.5em; background-color: $panda-face; }
 			
-			.panda .head .face .left-eye { top: 0.7em; left: 0em; }
-			.panda .head .face .left-eye .colour { 
-				width: 4.3em; height: 4.1em;
+			.panda .head .face .left-eye {
+				top: 11%; 
+				left: 0%; 
+				width: 42.5%;
+				height: 62.5%;
+				background-color: $panda-face;
 				@include border-top-left-radius(1.8em 1.8em);
 				@include border-top-right-radius(2.1em 2em);
 				@include border-bottom-right-radius(3.1em 1.8em);
 				@include border-bottom-left-radius(1.4em 1.8em);
 			}
 			
-			.panda .head .face .right-eye { top: 0em; left: 7.3em; }
-			.panda .head .face .right-eye .colour { 
-				width: 2.7em; height: 3.4em;
+			.panda .head .face .right-eye { 
+				top: 0em; 
+				left: 7.3em;
+				width: 2.7em; 
+				height: 3.4em;
+				background-color: $panda-face;
 				@include border-top-left-radius(1.2em 1.3em);
 				@include border-top-right-radius(1.1em 1.2em);
 				@include border-bottom-right-radius(1em 1.1em);
 				@include border-bottom-left-radius(1.7em 1.5em);
-			}	
+			}
 			
-			.panda .head .face .nose { top: 3.85em; left: 5.2em; }
+			/*.panda .head .face .nose { top: 3.85em; left: 5.2em; }
 			.panda .head .face .nose .colour { 
 				width: 4em; height: 2.8em;
 				@include border-bottom-right-radius(2.9em 3em);
@@ -137,7 +141,34 @@ torso 557x385 92.9% x 64.2%
 				width: 4.4em; height: 2.6em;
 				@include border-bottom-right-radius(2.9em 3em);
 				@include border-bottom-left-radius(1.4em 2.2em);
+			}*/
+			
+			
+			
+			.panda .head .face .nose { 
+				top: 55%; 
+				left: 49%;
+				width: 43.4%;
+				height: 43%;
 			}
+			.panda .head .face .nose .mask  {  
+				width: 100%; 
+				height: 80%;
+				background-color: $panda-body;
+				@include border-bottom-right-radius(2.9em 3em);
+				@include border-bottom-left-radius(1.4em 2.2em);
+			}
+			.panda .head .face .nose .colour { 
+				top: 11%; 
+				left: 2%;
+				width: 90%; 
+				height: 80%;
+				background-color: $panda-face;
+				@include border-bottom-right-radius(2.9em 3em);
+				@include border-bottom-left-radius(1.4em 2.2em);
+			}
+			
+			
 		
 			.panda .head .left-ear { 
 				top: 16%; 
@@ -373,7 +404,7 @@ torso 557x385 92.9% x 64.2%
 			.panda .torso .right-arm,
 			.panda .torso .left-foot,
 			.panda .torso .right-foot {
-				@include transition-property(comma-list(top, left));
+				@include transition-property(top, left);
 				@include transition-duration(100ms);
 				@include transition-timing-function(ease-in);
 			}
