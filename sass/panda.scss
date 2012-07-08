@@ -4,6 +4,8 @@
 	@import "compass/css3/border-radius";
 	@import "compass/css3/transition";
 
+	@import "_type.scss";
+
 /* Colours */
 
 	$canvas: #ededed;
@@ -79,7 +81,13 @@
 	/* 1em to equal 10px, anything sized in em's will shrink/grow depending on font-size % used */
 	
 		body {
-			font-size: 62.5%;
+			/*font-size: 62.5%;*/
+			font: 18px/27px 'BebasNeueRegular', Arial, sans-serif;
+		}
+		
+		h1 { 
+			font: 60px/68px 'BebasNeueRegular', Arial, sans-serif;
+			letter-spacing: 0; 
 		}
 		
 	/* Keep those images responsive */
