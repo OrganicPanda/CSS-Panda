@@ -5,3 +5,4 @@
 *.out
 .sass-cache
 .DS_Store
+.config.rb
