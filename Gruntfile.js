@@ -13,22 +13,6 @@ module.exports = function(grunt) {
 			buildPath: 'build/'
 		},
 
-		copy: {
-			main: {
-				files: [{
-					expand: true,
-					cwd: '<%= meta.srcPath %>font',
-					src: ['**'],
-					dest: '<%= meta.buildPath %>font'
-				}, {
-					expand: true,
-					cwd: '<%= meta.srcPath %>image',
-					src: ['**'],
-					dest: '<%= meta.buildPath %>image'
-				}]
-			}
-		},
-
 		compass: {
 			main: {
 				options: {
@@ -54,10 +38,9 @@ module.exports = function(grunt) {
 
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task.
-	grunt.registerTask('default', ['compass', 'copy']);
+	grunt.registerTask('default', ['compass']);
 
 };
