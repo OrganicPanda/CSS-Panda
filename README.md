@@ -10,20 +10,20 @@ Get the latest from http://nodejs.org/
 
 ### Ruby, Sass & Compass
 #### Mac
-> sudo gem install sass
-> sudo gem install compass
+	sudo gem install sass
+	sudo gem install compass
 
 #### Linux
-> sudo apt-get install ruby
-> sudo apt-get install rubygems
-> sudo gem install sass
-> sudo gem install compass
+	sudo apt-get install ruby
+	sudo apt-get install rubygems
+	sudo gem install sass
+	sudo gem install compass
 
 #### Windows
 Good luck to you!
 
 ### Node packages
-> npm install
+	npm install
 
 ## Building
-> grunt 
+	grunt 
