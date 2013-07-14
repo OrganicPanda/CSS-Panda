@@ -10,19 +10,14 @@ Get the latest from http://nodejs.org/
 
 ### Ruby, Sass & Compass
 #### Mac
-* SASS
-	> sudo gem install sass
-* Compass
-	> sudo gem install compass
+> sudo gem install sass
+> sudo gem install compass
 
 #### Linux
-* Ruby + RubyGems
-	> sudo apt-get install ruby
-	> sudo apt-get install rubygems
-* SASS
-	> sudo gem install sass
-* Compass
-	> sudo gem install compass
+> sudo apt-get install ruby
+> sudo apt-get install rubygems
+> sudo gem install sass
+> sudo gem install compass
 
 #### Windows
 Good luck to you!
