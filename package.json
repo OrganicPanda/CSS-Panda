@@ -1,0 +1,10 @@
+{
+  "name": "css-panda",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.3.0",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-copy": "~0.4.1"
+  }
+}
